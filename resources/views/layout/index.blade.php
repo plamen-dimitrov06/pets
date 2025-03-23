@@ -25,11 +25,6 @@
                 margin: 0;
             }
 
-            .task-list form,
-            .task-list input {
-                float:right;
-            }
-
             .full-height {
                 height: 100vh;
             }
