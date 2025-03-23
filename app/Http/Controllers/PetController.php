@@ -36,8 +36,8 @@ class PetController extends Controller
             'description'   => $input['description'],
             'type_id'          => $type->id,
         ]);
-        // TODO : add message to template
-        return redirect()->route('pets.index', ['message' => 'New pet added successfully!']);
+
+        return redirect()->route('pets.index');
     }
 
     public function search()
