@@ -4,8 +4,11 @@ namespace App\Search;
 
 class FindService
 {
-    public function __construct(public array $strategies = array())
+    public array $strategies;
+
+    public function __construct(array $strategies = array())
     {
+        $this->strategies = $strategies;
     }
 
     public function __invoke(array $input)

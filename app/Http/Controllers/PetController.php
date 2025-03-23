@@ -9,7 +9,11 @@ use App\Models\Pet;
 
 class PetController extends Controller
 {
-    public function __construct(protected FindService $searchService) {}
+    protected FindService $searchService;
+
+    public function __construct(FindService $searchService) {
+        $this->searchService = $searchService;
+    }
 
     public function index()
     {
