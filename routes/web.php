@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PetController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('pets/search', array(PetController::class, 'search'))->name('pets.search');
+Route::post('pets/find', array(PetController::class, 'find'))->name('pets.find');
+Route::resource('pets', PetController::class)->only('index', 'create', 'store');
